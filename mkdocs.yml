@@ -1,1 +1,29 @@
-site_name: My Docs
+site_name: Vedangi Srivastava — Content Design & Documentation
+site_description: Technical content design portfolio, structured as developer documentation.
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - tables
+  - toc:
+      permalink: true
+nav:
+  - Home: index.md
+  - Orientation:
+      - Content Layers Framework: orientation/content-layers.md
+      - Designing for AI Retrieval: orientation/ai-retrieval.md
+  - Decision:
+      - Content Governance & Freshness: decision/governance.md
+  - Implementation:
+      - Quickstart: implementation/quickstart.md
+      - Reports API Reference: implementation/reports-api.md
