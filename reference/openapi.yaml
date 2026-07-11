@@ -1,0 +1,25 @@
+openapi: 3.0.3
+info:
+  title: Reports API
+  version: 1.0.0
+paths:
+  /v1/reports/{report_id}:
+    get:
+      summary: Retrieve a report by ID
+      parameters:
+        - name: report_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: A report object
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  report_id: { type: string }
+                  status: { type: string }
+                  total: { type: integer }
